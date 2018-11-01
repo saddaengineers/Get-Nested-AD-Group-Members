@@ -1,0 +1,2 @@
+﻿#Get-Nested GroupMembers
+Get-ADGroupMember -Identity "TEST-MUKESH2" -Recursive | Where objectclass -EQ 'user' |Get-ADUser -Properties Displayname,mail,pwdLastSet,sAMAccountName,userWorkstations | Export-Csv c:\test.csv
